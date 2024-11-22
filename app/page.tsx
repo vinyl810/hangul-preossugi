@@ -42,12 +42,11 @@ export default function Home() {
           <textarea
             ref={textAreaRef}
             onChange={handleOnChange}
+            value={text}
             className={'scroll h-24 w-full resize-none border border-zinc-200 p-1 text-[14px] focus:outline-1 focus:outline-zinc-300 md:text-[16px]'}
             autoCorrect={'off'}
             spellCheck={'false'}
-          >
-            {text}
-          </textarea>
+          />
           <button
             onClick={handleErase}
             className={'absolute bottom-3 right-1 flex size-6 items-center justify-center rounded-full bg-zinc-400 opacity-75'}
@@ -93,8 +92,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={'absolute bottom-0 flex h-4 w-screen justify-center bg-zinc-400 text-[12px] text-zinc-100'}>
-        {'글꼴 출처:'} &nbsp; <a href={'https://github.com/Tzetachi/Computer-Modern-Unicode-Oesol'}>{'https://github.com/Tzetachi/Computer-Modern-Unicode-Oesol'}</a>
+      <div className={'absolute bottom-0 flex w-screen flex-wrap items-center justify-center bg-zinc-400 px-2 text-[12px] text-zinc-100'}>
+        {'글꼴 출처'} &nbsp; <a href={'https://github.com/Tzetachi/Computer-Modern-Unicode-Oesol'}>{'https://github.com/Tzetachi/Computer-Modern-Unicode-Oesol'}</a>
       </div>
     </main>
   );
